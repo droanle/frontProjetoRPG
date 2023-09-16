@@ -1,0 +1,20 @@
+[
+  {
+    "_id": 1,
+    "name": "tormenta",
+    "label": "Tormenta",
+    "resource": ["tool-CalcLoot"],
+    "image": "https://i.imgur.com/IU7L7Pq.png",
+    "resume": "",
+    "description": ""
+  },
+  {
+    "_id": 2,
+    "name": "teste",
+    "label": "Teste",
+    "resource": ["tool-CalcLoot"],
+    "image": "https://i.imgur.com/eoh6gw3.png",
+    "resume": "",
+    "description": ""
+  }
+]
