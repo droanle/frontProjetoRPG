@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Menu from "@assets/components/Menu";
 
+import style_local from "@assets/styles/tools.main.module.scss";
+import { Title_S1 } from "@/views/assets/elements/common.element";
+
 import BookManager from "@utils/types/book/BookManager";
 import { useParams } from "react-router-dom";
 
@@ -25,6 +28,10 @@ class Home extends Component<HomeProps, any> {
           books={this.books}
           current_book={this.props.current_book}
         />
+
+        <Title_S1 className={style_local.title}>
+          ferramentas para {this.props.current_book}
+        </Title_S1>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import Routes from "./routes";
 import reportWebVitals from "./reportWebVitals";
 import { PrimeReactProvider } from "primereact/api";
 
-//Theme
+// Theme
 import "./theme.css";
 
 //Core
@@ -17,6 +17,7 @@ import "font-awesome/css/font-awesome.min.css";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <PrimeReactProvider>

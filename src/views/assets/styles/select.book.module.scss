@@ -1,0 +1,72 @@
+.title {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  margin-inline: 9vw;
+}
+
+.instruction {
+  margin: 0px;
+  text-align: center;
+  font-weight: 100;
+}
+
+.cards_contents {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-width: 25rem;
+  max-width: 25vw;
+
+  margin-bottom: 2rem;
+
+  img {
+    width: 50% !important;
+    margin: 5% 25%;
+  }
+
+  p {
+    margin: 0px;
+    text-align: justify;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+
+    a {
+      width: 50%;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      button {
+        width: 100%;
+      }
+    }
+
+    &:link {
+      text-decoration: none;
+    }
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

@@ -25,6 +25,8 @@ class Home extends Component<HomeProps, any> {
           books={this.books}
           current_book={this.props.current_book}
         />
+
+        <h1>Notes Route</h1>
       </div>
     );
   }

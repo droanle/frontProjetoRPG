@@ -5,16 +5,16 @@
     "label": "Tormenta",
     "resource": ["tool-CalcLoot"],
     "image": "https://i.imgur.com/IU7L7Pq.png",
-    "resume": "",
+    "resume": "Tormenta é um RPG brasileiro de alta fantasia, ambientado no mundo de Arton, onde heróis enfrentam deuses, monstros e desafios épicos. Com um sistema baseado no d20, oferece uma vasta gama de opções de raças, classes e magias para criar aventuras memoráveis.",
     "description": ""
   },
   {
     "_id": 2,
-    "name": "teste",
-    "label": "Teste",
+    "name": "op",
+    "label": "Ordem Paranormal",
     "resource": ["tool-CalcLoot"],
-    "image": "https://i.imgur.com/eoh6gw3.png",
-    "resume": "",
+    "image": "https://i.imgur.com/nTugTlH.png",
+    "resume": "O RPG Ordem Paranormal é um jogo de investigação sobrenatural, onde jogadores assumem o papel de agentes que desvendam mistérios e lidam com o oculto. Com mecânicas próprias, explora o mundo paranormal em aventuras cheias de suspense e intrigas.",
     "description": ""
   }
 ]

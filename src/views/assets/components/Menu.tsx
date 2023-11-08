@@ -4,7 +4,7 @@ import { SplitButton } from "primereact/splitbutton";
 import { MenuItem } from "primereact/menuitem";
 
 import BookManager from "@utils/types/book/BookManager";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 interface MenuProps {
   books: BookManager;
@@ -31,15 +31,15 @@ class Menu extends Component<MenuProps, any> {
     {
       label: "Home",
       icon: "fa fa-home fa-lg",
-      command: (e) => this.teste(e),
+      command: (e) => this.teste(e.item.data),
       data: {
-        page: "adventures",
+        page: "home",
       },
     },
     {
       label: "Adventures",
       icon: "fa fa-leanpub fa-lg",
-      command: (e) => this.teste(e),
+      command: (e) => this.teste(e.item.data),
       data: {
         page: "adventures",
       },
@@ -47,7 +47,7 @@ class Menu extends Component<MenuProps, any> {
     {
       label: "Tools",
       icon: "fa fa-briefcase fa-lg",
-      command: (e) => this.teste(e),
+      command: (e) => this.teste(e.item.data),
       data: {
         page: "tools",
       },
@@ -55,7 +55,7 @@ class Menu extends Component<MenuProps, any> {
     {
       label: "Notes",
       icon: "fa fa-file fa-lg",
-      command: (e) => this.teste(e),
+      command: (e) => this.teste(e.item.data),
       data: {
         page: "notes",
       },
@@ -110,7 +110,14 @@ class Menu extends Component<MenuProps, any> {
   };
 
   teste(e: any) {
-    console.log(e);
+    if (this.props.current_book ?? false)
+      this.setState({
+        redirect: "/" + this.props.current_book + "/" + e.page,
+      });
+    else
+      this.setState({
+        redirect: "/" + e.page,
+      });
   }
   bookChange(book_data: any) {
     this.setState({
@@ -120,9 +127,17 @@ class Menu extends Component<MenuProps, any> {
 
   render() {
     const { redirect } = this.state;
+
+    this.items = this.items.map((element) => {
+      if (element.data.page == this.props.page)
+        element.className = "p-menuitem-active-coloring";
+
+      return element;
+    });
+
     return (
       <div className="card">
-        {redirect != null ? <Navigate to={redirect} replace={true} /> : ""}
+        {redirect != null ? <Navigate to={redirect} /> : ""}
 
         <Menubar
           style={{
@@ -130,19 +145,13 @@ class Menu extends Component<MenuProps, any> {
             marginInline: "15vw",
             paddingInline: "3rem",
           }}
-          model={this.items}
           start={this.start}
+          model={this.items}
           end={this.end}
         />
       </div>
     );
   }
 }
-
-// export default (props: any) => {
-//   let { book } = useParams<{ book: string }>();
-
-//   return <Menu {...props} book={book} />;
-// };
 
 export default Menu;

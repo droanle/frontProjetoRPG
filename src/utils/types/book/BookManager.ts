@@ -56,7 +56,6 @@ class Book implements BookScheme {
 
 export default class BookManager {
   private BookList: Array<Book> = [];
-  private process: any = [];
 
   constructor() {
     const AvailableBooks: Array<BookScheme> = require("./BookData.json");
@@ -88,7 +87,7 @@ export default class BookManager {
 
       for (const [key, value] of Object.entries(filter))
         if (Object.keys(book).indexOf(key) != -1) {
-          valid = book[key] == value;
+          valid = book[key] === value;
 
           if (!valid) break;
         }
@@ -96,7 +95,7 @@ export default class BookManager {
       if (valid)
         for (const [key, value] of Object.entries(negativeFilter))
           if (Object.keys(book).indexOf(key) != -1) {
-            valid = book[key] != value;
+            valid = book[key] !== value;
 
             if (!valid) break;
           }
@@ -115,6 +114,7 @@ export default class BookManager {
             if (alias != null) result[JSON.stringify(alias)] = value;
             else result[key] = value;
           } else result[key] = alias;
+      else result = book;
 
       return result;
     });

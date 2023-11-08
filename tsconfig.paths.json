@@ -5,6 +5,9 @@
       "@/*": ["*"],
       "@utils/*": ["utils/*"],
       "@assets/*": ["views/assets/*"],
+      "@components/*": ["views/assets/components/*"],
+      "@elements/*": ["views/assets/elements/*"],
+      "@styles/*": ["views/assets/styles/*"],
       "@pages/*": ["views/pages/*"]
     }
   }
